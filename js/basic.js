@@ -1,9 +1,9 @@
 var G = go.GraphObject.make;
 var diagram = G(go.Diagram, "myDiagramDiv");
 
-diagram.add(G(  //GraphObject.make是一个函数的第一个参数必须是一个类类型。
+diagram.add(G(
   go.Node,
-  go.Panel.Auto,
+  'Auto',
   G(
     go.Shape,
     'RoundedRectangle',
@@ -13,8 +13,8 @@ diagram.add(G(  //GraphObject.make是一个函数的第一个参数必须是一�
   ),
   G(
     go.TextBlock,
+    'Hello!',
     {
-      text: 'Hello!',
       margin: 5,
       editable: true
     }
