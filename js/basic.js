@@ -3,41 +3,48 @@ var diagram = G(go.Diagram, "myDiagramDiv");
 
 diagram.add(G(
   go.Part,
-  go.Panel.Position,
-  //最简单的一种面板是“Position”（Panel.Position）。每个元素获得其正常大小，无论其默认大小或指定GraphObject.desiredSize
-  //面板的大小刚好足以容纳所有元素
+  go.Panel.Vertical,
   {
     background: '#eee'
   },
   G(
     go.TextBlock,
     {
-      text: '0, 0',
+      text: '左',
+      background: '#394',
+      alignment: go.Spot.Left
+    }
+  ),
+  G(
+    go.TextBlock,
+    {
+      text: '中',
+      background: '#394',
+      alignment: go.Spot.Center
+    }
+  ),
+  G(
+    go.TextBlock,
+    {
+      text: '右',
+      background: '#394',
+      alignment: go.Spot.Right
+    }
+  ),
+  G(
+    go.TextBlock,
+    {
+      text: '－－－－拉伸面板－－－－',
       background: '#394'
     }
   ),
   G(
     go.TextBlock,
     {
-      text: '100, 100',
+      text: '扩展背景',
       background: '#394',
-      position: new go.Point(100, 100)
-    }
-  ),
-  G(
-    go.TextBlock,
-    {
-      text: '0, 100',
-      background: '#394',
-      position: new go.Point(0, 100)
-    }
-  ),
-  G(
-    go.TextBlock,
-    {
-      text: '100, 000',
-      background: '#394',
-      position: new go.Point(100, 0)
+      alignment: go.Spot.Right,
+      stretch: go.GraphObject.Fill
     }
   )
 ));
