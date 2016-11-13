@@ -3,48 +3,27 @@ var diagram = G(go.Diagram, "myDiagramDiv");
 
 diagram.add(G(
   go.Part,
-  go.Panel.Vertical,
+  go.Panel.Horizontal,
   {
-    background: '#eee'
+    position: new go.Point(500, 0),
+    background: '#ddd',
+    height: 150
   },
   G(
-    go.TextBlock,
+    go.Shape,
     {
-      text: '左',
-      background: '#394',
-      alignment: go.Spot.Left
+      width: 30,
+      height: 50,
+      fill: '#394',
+      alignment: go.Spot.Top //center bottom
     }
   ),
   G(
-    go.TextBlock,
+    go.Shape,
     {
-      text: '中',
-      background: '#394',
-      alignment: go.Spot.Center
-    }
-  ),
-  G(
-    go.TextBlock,
-    {
-      text: '右',
-      background: '#394',
-      alignment: go.Spot.Right
-    }
-  ),
-  G(
-    go.TextBlock,
-    {
-      text: '－－－－拉伸面板－－－－',
-      background: '#394'
-    }
-  ),
-  G(
-    go.TextBlock,
-    {
-      text: '扩展背景',
-      background: '#394',
-      alignment: go.Spot.Right,
-      stretch: go.GraphObject.Fill
+      width: 30,
+      height: 100,
+      fill: '#394'
     }
   )
 ));
