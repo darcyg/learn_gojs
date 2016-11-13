@@ -1,34 +1,56 @@
 var G = go.GraphObject.make;
 var diagram = G(go.Diagram, "myDiagramDiv");
 
+
 diagram.add(G(
   go.Part,
   'Horizontal',
   G(
     go.TextBlock,
     {
-      text: 'A1'
+      text: '背景色',
+      background: '#492',
+      margin: 5
     }
   ),
   G(
     go.TextBlock,
     {
-      text: 'A2',
-      stroke: '#492'
+      text: '长100 * 宽30',
+      background: '#492',
+      margin: 5,
+      width: 100,
+      height: 30
     }
   ),
   G(
     go.TextBlock,
     {
-      text: 'A3',
-      background: '#492'
+      text: '长60宽30',
+      background: '#492',
+      margin: 5,
+      width: 60,
+      height: 30
     }
   ),
   G(
     go.TextBlock,
     {
-      text: 'A4',
-      font: 'bold 22px serif'
+      text: '长60宽20',
+      background: '#492',
+      margin: 5,
+      width: 60,
+      height: 20
+    }
+  ),
+  G(
+    go.TextBlock,
+    {
+      text: '长60宽10',
+      background: '#492',
+      margin: 5,
+      width: 60,
+      height: 10
     }
   )
 ));
