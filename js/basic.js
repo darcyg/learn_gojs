@@ -6,105 +6,79 @@ diagram.add(G(
   G(
     go.Panel,
     'Table',
-    {
-      defaultAlignment: go.Spot.Left
-    },
     G(
-      go.RowColumnDefinition,
+      go.TextBlock,
       {
-        column: 0,
-        width: 100
-      }
-    ),
-    G(
-      go.RowColumnDefinition,
-      {
-        column:1,
-        width: 15,
-      }
-    ),
-    G(
-      go.Panel,
-      'Auto',
-      {
+        text: '顶标题',
         row: 0,
         column: 0,
-        alignment: go.Spot.Left
-      },
-      G(
-        go.Shape,
-        'RoundedRectangle',
-        {
-          fill: '#493'
-        }
-      ),
-      G(
-        go.TextBlock,
-        'auot panel'
-      )
+        columnSpan: 3,
+        stretch: go.GraphObject.Horizontal,
+        margin: 2,
+        background: '#394'
+      }
     ),
     G(
       go.TextBlock,
       {
-        text: 'alignment: left',
-        row: 0,
-        column:2
-      }
-    ),
-    G(
-      go.Panel,
-      'Auto',
-      {
+        text: '侧标题',
         row: 1,
         column: 0,
-        alignment: go.Spot.Center
-      },
-      G(
-        go.Shape,
-        'RoundedRectangle',
-        {
-          fill: '#493'
-        }
-      ),
-      G(
-        go.TextBlock,
-        'auto panel'
-      )
-    ),
-    G(
-      go.TextBlock,
-      {
-        text: 'alignment: center',
-        row:1,
-        column: 2
+        rowSpan:2,
+        margin: 2,
+        stretch: go.GraphObject.Vertical,
+        background: '#394'
       }
     ),
     G(
-      go.Panel,
-      'Auto',
+      go.TextBlock,
       {
-        row:2,
-        column: 0,
-        alignment: go.Spot.Right
-      },
-      G(
-        go.Shape,
-        'RoundedRectangle',
-        {
-          fill: '#493'
-        }
-      ),
-      G(
-        go.TextBlock,
-        'auto panel'
-      )
+        text: '一行一列',
+        row: 1,
+        column: 1,
+        margin: 2,
+        background: '#394'
+      }
     ),
     G(
       go.TextBlock,
       {
-        text: 'alignment: right',
+        text: '一行两列',
+        row: 1,
+        column: 2,
+        margin: 2,
+        background: '#394'
+      }
+    ),
+    G(
+      go.TextBlock,
+      {
+        text: '二行一列',
         row: 2,
-        column: 2
+        column: 1,
+        margin: 2,
+        background: '#394'
+      }
+    ),
+    G(
+      go.TextBlock,
+      {
+        text: '二行三列',
+        row: 2,
+        column: 3,
+        margin: 2,
+        background: '#394'
+      }
+    ),
+    G(
+      go.TextBlock,
+      {
+        text: '结尾',
+        row: 3,
+        column: 2,
+        columnSpan: 2,
+        margin: 2,
+        background: '#394'
       }
     )
   )
