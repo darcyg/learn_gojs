@@ -3,36 +3,43 @@ var diagram = G(go.Diagram, "myDiagramDiv");
 
 diagram.add(G(
   go.Part,
-  'Horizontal',
+  'Table',
   G(
     go.Shape,
     {
-      width:100,
+      row: 0,
+      column: 1,
+      width:40,
       height:40,
-      margin:2,
-      fill: '#394',
+      margin: 5,
+      fill: '#492',
       strokeWidth: 0
     }
   ),
   G(
     go.Shape,
     {
-      width:100,
-      height:40,
-      fill: null,
-      stroke: '#394',
-      strokeWidth: 4
+      row: 0,
+      column: 2,
+      width: 40,
+      height: 40,
+      margin: 5,
+      fill: '#492',
+      strokeWidth: 0,
+      angle: 45
     }
   ),
   G(
     go.Shape,
     {
-      width: 100,
-      height:40,
-      fill: null,
-      stroke: '#439',
-      strokeWidth: 5,
-      background: '#394'
+      row: 0,
+      column: 3,
+      width: 40,
+      height: 40,
+      margin: 5,
+      fill: '#492',
+      strokeWidth: 0,
+      scale: 1.5
     }
   )
 ));
