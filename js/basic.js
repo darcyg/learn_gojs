@@ -3,24 +3,24 @@ var diagram = G(go.Diagram, "myDiagramDiv");
 
 diagram.add(G(
   go.Part,
-  'Vertical',
+  'Horizontal',
   G(
-    go.TextBlock,
+    go.Shape,
+    'Rectangle',
     {
-      text: '选中后，单击编辑，不可换行',
-      background: '#492',
-      margin: 5,
-      editable: true,
-      isMultiline: false
+      width:40,
+      height:60,
+      margin: 4,
+      fill: null
     }
   ),
   G(
-    go.TextBlock,
+    go.Shape,
+    'Ellipse',
     {
-      text: '允许嵌入换行',
-      background: '#492',
-      margin: 5,
-      editable: true
+      desiredSize: new go.Size(40, 60),
+      margin: 4,
+      fill: null
     }
   )
 ));
