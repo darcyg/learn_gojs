@@ -8,49 +8,40 @@ diagram.add(G(
   G(
     go.TextBlock,
     {
-      text: '背景色',
+      text: '文本块默认文本块默认',
       background: '#492',
-      margin: 5
+      margin: 1,
+      width:40
     }
   ),
   G(
     go.TextBlock,
     {
-      text: '长100 * 宽30',
+      text: '文本块不换行剪裁',
       background: '#492',
-      margin: 5,
-      width: 100,
-      height: 30
+      margin: 1,
+      width:75,
+      wrap: go.TextBlock.None
     }
   ),
   G(
     go.TextBlock,
     {
-      text: '长60宽30',
+      text: '文本块换行  Wrap',
       background: '#492',
-      margin: 5,
-      width: 60,
-      height: 30
+      margin: 1,
+      width:75,
+      wrap: go.TextBlock.WrapDesiredSize
     }
   ),
   G(
     go.TextBlock,
     {
-      text: '长60宽20',
+      text: '文本块清理边距  Wrap',
       background: '#492',
-      margin: 5,
-      width: 60,
-      height: 20
-    }
-  ),
-  G(
-    go.TextBlock,
-    {
-      text: '长60宽10',
-      background: '#492',
-      margin: 5,
-      width: 60,
-      height: 10
+      margin: 1,
+      width:120,
+      wrap: go.TextBlock.WrapFit
     }
   )
 ));
