@@ -3,75 +3,24 @@ var diagram = G(go.Diagram, "myDiagramDiv");
 
 diagram.add(G(
   go.Part,
-  'Horizontal',
+  'Vertical',
   G(
-    go.Panel,
-    'Vertical',
+    go.TextBlock,
     {
-      width: 150,
-      defaultStretch: go.GraphObject.Horizontal
-    },
-    G(
-      go.TextBlock,
-      {
-        text: '左对齐',
-        background: '#492',
-        textAlign: 'left',
-        margin: 2
-      }
-    ),
-    G(
-      go.TextBlock,
-      {
-        text: '居中',
-        background: '#492',
-        textAlign: 'center',
-        margin: 2
-      }
-    ),
-    G(
-      go.TextBlock,
-      {
-        text: '右对齐',
-        background: '#492',
-        textAlign: 'right',
-        margin: 2
-      }
-    )
+      text: '选中后，单击编辑，不可换行',
+      background: '#492',
+      margin: 5,
+      editable: true,
+      isMultiline: false
+    }
   ),
   G(
-    go.Panel,
-    'Vertical',
+    go.TextBlock,
     {
-      width: 150,
-      defaultStretch: go.GraphObject.None
-    },
-    G(
-      go.TextBlock,
-      {
-        text: '左对齐',
-        background: '#492',
-        alignment: go.Spot.Left,
-        margin: 2
-      }
-    ),
-    G(
-      go.TextBlock,
-      {
-        text: '居中',
-        background: '#492',
-        alignment: go.Spot.Center,
-        margin: 2
-      }
-    ),
-    G(
-      go.TextBlock,
-      {
-        text: '右对齐',
-        background: '#492',
-        alignment: go.Spot.Right,
-        margin: 2
-      }
-    )
+      text: '允许嵌入换行',
+      background: '#492',
+      margin: 5,
+      editable: true
+    }
   )
 ));
