@@ -3,27 +3,46 @@ var diagram = G(go.Diagram, "myDiagramDiv");
 
 diagram.add(G(
   go.Part,
-  go.Panel.Horizontal,
+  'Horizontal',
   {
-    position: new go.Point(500, 0),
-    background: '#ddd',
-    height: 150
+    background: '#ccc',
+    height: 90,
+    defaultAlignment: go.Spot.Bottom
   },
   G(
     go.Shape,
     {
       width: 30,
-      height: 50,
+      margin: 3,
       fill: '#394',
-      alignment: go.Spot.Top //center bottom
+      height: 60
     }
   ),
   G(
     go.Shape,
     {
       width: 30,
-      height: 100,
-      fill: '#394'
+      margin: 3,
+      fill: '#394',
+      height: 20
+    }
+  ),
+  G(
+    go.Shape,
+    {
+      width: 30,
+      margin: 3,
+      fill: '#394',
+      height: 40
+    }
+  ),
+  G(
+    go.Shape,
+    {
+      width: 30,
+      margin: 3,
+      fill: '#394',
+      stretch: go.GraphObject.Fill
     }
   )
 ));
