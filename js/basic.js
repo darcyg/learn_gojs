@@ -1,6 +1,34 @@
-var diagram = new go.Diagram("myDiagramDiv");
-diagram.model = new go.GraphLinksModel(
-  [{ key: "Hello" },   // two node data, in an Array
-    { key: "World!" }],
-  [{ from: "Hello", to: "World!"}]  // one link, in an Array
-);
+var G = go.GraphObject.make;
+var diagram = G(go.Diagram, "myDiagramDiv");
+
+diagram.add(G(
+  go.Part,
+  'Horizontal',
+  G(
+    go.TextBlock,
+    {
+      text: 'A1'
+    }
+  ),
+  G(
+    go.TextBlock,
+    {
+      text: 'A2',
+      stroke: '#492'
+    }
+  ),
+  G(
+    go.TextBlock,
+    {
+      text: 'A3',
+      background: '#492'
+    }
+  ),
+  G(
+    go.TextBlock,
+    {
+      text: 'A4',
+      font: 'bold 22px serif'
+    }
+  )
+));
