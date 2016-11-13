@@ -23,7 +23,11 @@ diagram.nodeTemplate = G(
 diagram.linkTemplate = G(
   go.Link,
   G(
-    go.Shape
+    go.Shape,
+    {
+      toArrow: 'OpenTriangle',
+      fill: null
+    }
   )
 );
 var nodeDataArray = [
