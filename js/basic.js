@@ -1,45 +1,14 @@
 var G = go.GraphObject.make;
 var diagram = G(go.Diagram, "myDiagramDiv");
 
-diagram.add(G(
-  go.Part,
-  'Table',
-  G(
-    go.Shape,
-    {
-      row: 0,
-      column: 1,
-      width:40,
-      height:40,
-      margin: 5,
-      fill: '#492',
-      strokeWidth: 0
-    }
-  ),
-  G(
-    go.Shape,
-    {
-      row: 0,
-      column: 2,
-      width: 40,
-      height: 40,
-      margin: 5,
-      fill: '#492',
-      strokeWidth: 0,
-      angle: 45
-    }
-  ),
-  G(
-    go.Shape,
-    {
-      row: 0,
-      column: 3,
-      width: 40,
-      height: 40,
-      margin: 5,
-      fill: '#492',
-      strokeWidth: 0,
-      scale: 1.5
-    }
-  )
-));
+var node = new go.Node(go.Panel.Auto);
+var shape = new go.Shape();
+shape.figure = 'RoundedRectangle';
+shape.fill = '#394';
+node.add(shape);
+var textBlock = new go.TextBlock();
+textBlock.text = 'Hello!';
+textBlock.margin = 5;
+textBlock.editable = true;
+node.add(textBlock);
+diagram.add(node);
