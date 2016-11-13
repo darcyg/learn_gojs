@@ -1,47 +1,77 @@
 var G = go.GraphObject.make;
 var diagram = G(go.Diagram, "myDiagramDiv");
 
-
 diagram.add(G(
   go.Part,
   'Horizontal',
   G(
-    go.TextBlock,
+    go.Panel,
+    'Vertical',
     {
-      text: '文本块默认文本块默认',
-      background: '#492',
-      margin: 1,
-      width:40
-    }
+      width: 150,
+      defaultStretch: go.GraphObject.Horizontal
+    },
+    G(
+      go.TextBlock,
+      {
+        text: '左对齐',
+        background: '#492',
+        textAlign: 'left',
+        margin: 2
+      }
+    ),
+    G(
+      go.TextBlock,
+      {
+        text: '居中',
+        background: '#492',
+        textAlign: 'center',
+        margin: 2
+      }
+    ),
+    G(
+      go.TextBlock,
+      {
+        text: '右对齐',
+        background: '#492',
+        textAlign: 'right',
+        margin: 2
+      }
+    )
   ),
   G(
-    go.TextBlock,
+    go.Panel,
+    'Vertical',
     {
-      text: '文本块不换行剪裁',
-      background: '#492',
-      margin: 1,
-      width:75,
-      wrap: go.TextBlock.None
-    }
-  ),
-  G(
-    go.TextBlock,
-    {
-      text: '文本块换行  Wrap',
-      background: '#492',
-      margin: 1,
-      width:75,
-      wrap: go.TextBlock.WrapDesiredSize
-    }
-  ),
-  G(
-    go.TextBlock,
-    {
-      text: '文本块清理边距  Wrap',
-      background: '#492',
-      margin: 1,
-      width:120,
-      wrap: go.TextBlock.WrapFit
-    }
+      width: 150,
+      defaultStretch: go.GraphObject.None
+    },
+    G(
+      go.TextBlock,
+      {
+        text: '左对齐',
+        background: '#492',
+        alignment: go.Spot.Left,
+        margin: 2
+      }
+    ),
+    G(
+      go.TextBlock,
+      {
+        text: '居中',
+        background: '#492',
+        alignment: go.Spot.Center,
+        margin: 2
+      }
+    ),
+    G(
+      go.TextBlock,
+      {
+        text: '右对齐',
+        background: '#492',
+        alignment: go.Spot.Right,
+        margin: 2
+      }
+    )
   )
 ));
