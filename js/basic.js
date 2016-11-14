@@ -47,3 +47,9 @@ function addNode() {
   myDiagram.model.addNodeData({key: "release", parent: "uat", background: "#44CCFF"})
   console.log(myDiagram.model.toJson())
 }
+
+function removeNode() {
+  var data = myDiagram.model.findNodeDataForKey("dev");
+  myDiagram.model.removeNodeData(data)
+  console.log(myDiagram.model.toJson())
+}
