@@ -27,8 +27,8 @@ myDiagram.linkTemplate =
     { routing: go.Link.Orthogonal, corner: 5 },
     G(go.Shape, { strokeWidth: 3, stroke: "#555" })); // the link shape
 
-var model = G(go.TreeModel);
 
+var model = G(go.TreeModel);
 model.nodeDataArray =
   [
     { key: "build",              background: "#44CCFF"},
@@ -39,3 +39,11 @@ model.nodeDataArray =
   ];
 
 myDiagram.model = model;
+
+var modelAsText = myDiagram.model.toJson();
+console.log(modelAsText)
+
+function addNode() {
+  myDiagram.model.addNodeData({key: "release", parent: "uat", background: "#44CCFF"})
+  console.log(myDiagram.model.toJson())
+}
