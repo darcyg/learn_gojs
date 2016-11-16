@@ -6,6 +6,7 @@ function init() {
       {
         initialContentAlignment: go.Spot.Center,
         "undoManager.isEnabled": true,
+        allowDelete: false,
         layout: G(go.TreeLayout, // specify a Diagram.layout that arranges trees
           { angle: 0, layerSpacing: 35 })
       });
