@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Links to Links</title>
-    <meta name="description" content="Links can connect with Links by using label Nodes on Links." />
+    <title>Links</title>
+    <meta name="description" content="Links can connect with Links by using label Nodes on Links."/>
     <!-- Copyright 1998-2016 by Northwoods Software Corporation. -->
     <meta charset="UTF-8">
     <link rel="stylesheet" href="index.css">
@@ -16,29 +16,19 @@
         <div>
             <button id="SaveButton" onclick="save()">Save</button>
             <button onclick="load()">Load</button>
-            Diagram.model saved in JSON format:<br />
+            Diagram.model saved in JSON format:<br/>
         </div>
       <textarea id="mySavedModel" style="width:100%;height:400px">
-{ "class": "go.GraphLinksModel",
-  "linkLabelKeysProperty": "labelKeys",
+{
+  "class": "go.TreeModel",
   "nodeDataArray": [
-{"key":"Alpha", "color":"lightblue", "loc":"29 14"},
-{"key":"Beta", "color":"orange", "loc":"129 14"},
-{"key":"Gamma", "color":"lightgreen", "loc":"29 106"},
-{"key":"Delta", "color":"pink", "loc":"129 106"},
-{"key":"A-B", "category":"LinkLabel" },
-{"key":"G-D", "category":"LinkLabel" },
-{"key":"A-G", "category":"LinkLabel" },
-{"key":"A-G-D", "category":"LinkLabel" },
-{"key":"A-B-G-D", "category":"LinkLabel" }
- ],
-  "linkDataArray": [
-{"from":"Alpha", "to":"Beta", "labelKeys":[ "A-B" ]},
-{"from":"Gamma", "to":"Delta", "labelKeys":[ "G-D" ]},
-{"from":"Alpha", "to":"Gamma", "labelKeys":[ "A-G" ]},
-{"from":"Alpha", "to":"G-D", "labelKeys":[ "A-G-D" ], "category":"linkToLink"},
-{"from":"A-B", "to":"G-D", "labelKeys":[ "A-B-G-D" ], "category":"linkToLink"}
- ]}
+    {"key": "build", "background": "#44CCFF"},
+    {"key": "dev", "parent": "build", "background": "#44CCFF"},
+    {"key": "sit", "parent": "build", "background": "#44CCFF"},
+    {"key": "uat", "parent": "sit", "background": "#44CCFF"},
+    {"key": "prod", "parent": "uat", "background": "#44CCFF"}
+  ]
+}
       </textarea>
     </div>
 </div>
