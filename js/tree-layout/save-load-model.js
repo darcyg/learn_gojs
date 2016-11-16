@@ -19,6 +19,12 @@ function init() {
 
   myDiagram.nodeTemplate =
     G(go.Node, "Auto",
+      {
+        cursor: "pointer",
+        click: function(e, obj) {
+          window.open("http://baidu.com");
+        }
+      },
       G(go.Shape,
         "Ellipse",
         { width: 60, height: 40, stroke: "black", strokeWidth: 2 },
@@ -34,19 +40,6 @@ function init() {
     G(go.Link,
       { routing: go.Link.Orthogonal, corner: 5 },
       G(go.Shape, { strokeWidth: 3, stroke: "#555" })); // the link shape
-
-
-  var model = G(go.TreeModel);
-  model.nodeDataArray =
-    [
-      { key: "build",              background: "#44CCFF"},
-      { key: "dev", parent: "build", background: "#44CCFF"},
-      { key: "sit", parent: "build", background: "#44CCFF"},
-      { key: "uat", parent: "sit", background: "#44CCFF"},
-      { key: "prod", parent: "uat", background: "#44CCFF"}
-    ];
-
-  myDiagram.model = model;
 
   load();
 }
