@@ -19,16 +19,18 @@
             Diagram.model saved in JSON format:<br/>
         </div>
       <textarea id="mySavedModel" style="width:100%;height:400px">
-{
-  "class": "go.TreeModel",
-  "nodeDataArray": [
-    {"key": "build", "background": "#44CCFF"},
-    {"key": "dev", "parent": "build", "background": "#44CCFF"},
-    {"key": "sit", "parent": "build", "background": "#44CCFF"},
-    {"key": "uat", "parent": "sit", "background": "#44CCFF"},
-    {"key": "prod", "parent": "uat", "background": "#44CCFF"}
-  ]
-}
+        {
+          "class": "go.TreeModel",
+          "nodeDataArray": [
+            {"key": "start", "background": "#44CCFF", "fig": "RoundedRectangle"},
+            {"key": "build", "parent": "start","background": "#44CCFF", "fig": "RoundedRectangle"},
+            {"key": "dev", "parent": "build", "background": "#44CCFF"},
+            {"key": "sit", "parent": "build", "background": "#44CCFF"},
+            {"key": "uat", "parent": "sit", "background": "#44CCFF"},
+            {"key": "prod", "parent": "uat", "background": "#44CCFF"},
+            {"key": "end", "parent": "prod","background": "#44CCFF", "fig": "RoundedRectangle"}
+          ]
+        }
       </textarea>
     </div>
 </div>

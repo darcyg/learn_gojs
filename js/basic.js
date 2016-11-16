@@ -28,15 +28,17 @@ function init() {
       G(go.Shape,
         "Ellipse",
         {width: 80, height: 60, stroke: "black", strokeWidth: 2},
+        new go.Binding("figure", "fig"),
         new go.Binding("fill", "background")),
+
 
       G(go.Panel, "Vertical",
         G(go.TextBlock, "-",
-          {margin: 2, stroke: "white", font: "bold 16px sans-serif"},
+          {margin: 0, stroke: "white", font: "bold 16px sans-serif"},
           new go.Binding("text", "key")),
 
         G(go.TextBlock, "-",
-          {margin: 2, stroke: "white", font: "bold 16px sans-serif"},
+          {margin: 0, stroke: "white", font: "bold 16px sans-serif"},
           new go.Binding("text", "parent"))
       )
     );
