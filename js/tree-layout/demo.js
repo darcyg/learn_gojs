@@ -4,6 +4,8 @@ var myDiagram =
   G(go.Diagram, "myDiagramDiv",
     {
       initialContentAlignment: go.Spot.Center, // center Diagram contents
+      isReadOnly: true,
+      isEnabled: false,
       "undoManager.isEnabled": true, // enable Ctrl-Z to undo and Ctrl-Y to #44CCFFo
       layout: G(go.TreeLayout, // specify a Diagram.layout that arranges trees
         { angle: 0, layerSpacing: 35 })
